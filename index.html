@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+
+<!-- Author: Shorouk Abdelaziz  https://shorouk.dev -->
+
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>My Socials</title>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.0/css/all.min.css">
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      display: grid;
+      font-family: "Poppins", sans-serif;
+      place-items: center;
+    }
+
+    .wrapper {
+      padding-top: 10px;
+      display: inline-flex;
+      justify-content: center; /* Center icons */
+    }
+
+    .icon {
+      /* Initial icon size */
+      font-size: 2em;
+      /* Icon color */
+      color: #7a7a7a; /* Default gray color */
+      /* Transition for smooth hover effect */
+      transition: all 0.3s ease;
+    }
+
+    /* Change icon color and enlarge on hover */
+    .social:hover .icon {
+      color: #000; /* Change color on hover */
+      font-size: 2.5em;
+    }
+
+    /* Show icon name on hover */
+    .social:hover .icon-name {
+      opacity: 1;
+    }
+
+    .icon-name {
+      position: absolute;
+      bottom: -20px;
+      left: 50%;
+      transform: translateX(-50%);
+      font-size: 0.8em;
+      color: #000;
+      opacity: 0;
+      transition: opacity 0.3s ease;
+    }
+
+    .social {
+      position: relative;
+      margin: 10px;
+      cursor: pointer;
+    }
+  </style>
+
+</head>
+
+<body>
+
+  <div class="wrapper">
+
+    <!-- Start CvSU Portal Icon -->
+    <div id="cvsulogo" onclick="navigate('https://trece.cvsu.edu.ph/student/dashboard')" class="social cvsu">
+      <span class="icon cvsu"><img src="https://upload.wikimedia.org/wikipedia/en/d/d2/Cavite_State_University_%28CvSU%29.png" alt="CvSU Logo" width="40"></span>
+      <span class="icon-name">CvSU Portal</span>
+    </div>
+    <!-- End CvSU Portal Icon -->
+
+    <!-- Start Gmail Icon -->
+    <div id="gmail" onclick="navigate('https://mail.google.com/')" class="social">
+      <span class="icon gmail"><i class="fab fa-google"></i></span>
+      <span class="icon-name">Gmail</span>
+    </div>
+    <!-- End Gmail Icon -->
+
+    <!-- Start Google Classroom Icon -->
+    <div id="googleclassroom" onclick="navigate('https://classroom.google.com/h')" class="social">
+      <span class="icon googleclassroom"><i class="fas fa-chalkboard"></i></span>
+      <span class="icon-name">Google Classroom</span>
+    </div>
+    <!-- End Google Classroom Icon -->
+
+    <!-- Start Google Docs Icon -->
+    <div id="googledocs" onclick="navigate('https://docs.google.com/document/u/0/?tgif=d')" class="social">
+      <span class="icon googledocs"><i class="fas fa-file-alt"></i></span>
+      <span class="icon-name">Google Docs</span>
+    </div>
+    <!-- End Google Docs Icon -->
+
+    <!-- Start Google Sheets Icon -->
+    <div id="googlesheets" onclick="navigate('https://docs.google.com/spreadsheets/d/1DTT2gqJIxGJBoMMlHUOcSZmjZT75huIRvqeMWTjxnwM/edit#gid=0')" class="social">
+      <span class="icon googlesheets"><i class="fas fa-table"></i></span>
+      <span class="icon-name">Google Sheets</span>
+    </div>
+    <!-- End Google Sheets Icon -->
+
+    <!-- Start Psych Books (Google Drive) Icon -->
+    <div id="googledrive" onclick="openApplication('google-drive')" class="social googledrive">
+      <span class="icon googledrive"><i class="fab fa-google-drive"></i></span>
+      <span class="icon-name">Psych Books</span>
+    </div>
+    <!-- End Psych Books (Google Drive) Icon -->
+
+    <!-- Start Grammarly Icon -->
+    <div id="grammarly" onclick="navigate('https://www.grammarly.com/')" class="social">
+      <span class="icon grammarly"><i class="fas fa-spell-check"></i></span>
+      <span class="icon-name">Grammarly</span>
+    </div>
+    <!-- End Grammarly Icon -->
+
+    <!-- Start JP Buduan (YouTube) Icon -->
+    <div id="jp-buduan" onclick="navigate('https://www.youtube.com/c/JPBuduan')" class="social">
+      <span class="icon jp-buduan"><i class="fab fa-youtube"></i></span>
+      <span class="icon-name">JP Buduan</span>
+    </div>
+    <!-- End JP Buduan (YouTube) Icon -->
+
+  </div>
+
+  <script>
+    function navigate(url) {
+      window.open(url, '_blank').focus();
+    }
+
+    function openApplication(app) {
+      if (app === 'google-drive') {
+        window.open('https://drive.google.com/drive/folders/1NSsix9YXEA0DtIzT2FgyFHa7nJ6No8jh?fbclid=IwAR2PKHyJTDhAU2epDoLrUtMdjycHEdnURHU-BivhlMrGSeMtkdcJFypzlI0', '_blank').focus();
+      }
+    }
+  </script>
+
+</body>
+
+</html>
